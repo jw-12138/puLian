@@ -1,0 +1,3 @@
+<view class="ui-wrap">
+  <rich-text nodes="{{linkTree}}"></rich-text>
+</view>

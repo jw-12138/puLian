@@ -1,3 +1,17 @@
 <view class="ui-wrap">
-  <rich-text nodes="{{linkTree}}"></rich-text>
+  <text class="page-title">
+    用户页面
+  </text>
+  <navigator url="/pages/redpack/redpack">
+    - 红包
+  </navigator>
+  <navigator url="">
+    - 券
+  </navigator>
+  <navigator url="">
+    - 地图
+  </navigator>
+  <navigator url="">
+    - 核销码
+  </navigator>
 </view>

@@ -8,9 +8,5 @@
     "watch-css": "npx lessby -i ./pages -s -r -e wxss"
   },
   "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "concurrently": "^6.3.0",
-    "lessby": "^1.1.3"
-  }
+  "license": "ISC"
 }

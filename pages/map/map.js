@@ -39,7 +39,7 @@ Page({
   },
 
   initMap: function () {
-    mapCTX.addMarkers()
+    // mapCTX.addMarkers()
   },
 
   /**

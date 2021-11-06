@@ -1,0 +1,25 @@
+<view class="ui-wrap">
+  <view class="ticket-shop">
+    <view class="_title">{{ticket.shopName}}</view>
+    <view class="_addr">{{ticket.address}}</view>
+  </view>
+  <view class="ticket-list">
+    <view class="item">
+      <view class="_text">
+        <view class="l1">{{ticket.shopName}}</view>
+        <view class="l2">
+          <text>{{ticket.amount}}</text>
+          元
+        </view>
+        <view class="l3">{{ticket.claim}}</view>
+      </view>
+      <view wx:if="{{ticket.img}}" class="img" hover-class="none" hover-stop-propagation="false">
+        <image src="{{ticket.img}}" lazy-load="false" mode="aspectFill"></image>
+      </view>
+    </view>
+  </view>
+  <view class="qrcode">
+    <image src="/assets/img/qrcode.png" mode="heightFix" />
+  </view>
+  <view class="claim">请向收银员出示此核销码</view>
+</view>

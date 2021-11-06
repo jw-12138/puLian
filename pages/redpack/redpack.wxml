@@ -1,16 +1,52 @@
-<view class="page {{loaded ? 'on' : ''}}" style="background: url(\"/assets/img/redpack-bg.jpg\"); background-size: cover;background-position: center;">
-  <view class="redpack-wrap {{redpackWrapExpand ? 'on' : ''}}" style="height: {{height}}">
+<view class="page {{loaded ? 'on' : ''}}" style="background: url(\" /assets/img/redpack-bg.jpg\"); background-size: cover;background-position: center;">
+  <view class="redpack-wrap {{heightReady ? 'ready' : ''}} {{redpackWrapExpand ? 'on' : ''}}" style="height: {{height}}">
     <view class="text">
       恭喜您获得了一个红包!
     </view>
     <view class="top-half" style="background-color: #e1645a">
-    
+
     </view>
-    <view class="button {{buttonSpin ? 'on' : ''}} {{buttonShow ? '' : 'off'}}" bind:tap="runAnimation">
+    <view class="button {{buttonSpin ? 'on' : ''}} {{buttonShow ? '' : 'off'}}" bindtap="runAnimation">
       開
     </view>
     <view class="bottom-half" style="background-color: #e45f4e">
-    
+
+    </view>
+
+    <view class="wrap-content {{showContent ? 'on' : ''}}" hover-class="none" hover-stop-propagation="false">
+      <scroll-view scroll-y="{{true}}">
+        <view class="claim">
+          恭喜你获得红包和以下店铺优惠券
+        </view>
+        <view class="amount">
+          <view class="unit">￥</view> {{redpackAmount}}
+        </view>
+
+        <view class="ticket-list">
+          <view class="item" wx:for="{{ticketsData}}">
+            <view class="_text">
+              <view class="l1">
+                {{item.shopName}}
+              </view>
+              <view class="l2">
+                <text>{{item.amount}}</text> 元
+              </view>
+              <view class="l3">
+                {{item.claim}}
+              </view>
+            </view>
+            <view wx:if="{{item.img}}" class="img" hover-class="none" hover-stop-propagation="false">
+              <image src="{{item.img}}" lazy-load="false" mode="aspectFill">
+              </image>
+            </view>
+          </view>
+        </view>
+
+        <button type="default" style="background-color: #e1645a; color:bisque" bindtap="goToPage">全部领取</button>
+        <view class="claim">
+          红包将直接存入零钱
+        </view>
+      </scroll-view>
     </view>
   </view>
 </view>

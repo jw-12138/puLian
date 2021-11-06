@@ -1,0 +1,109 @@
+@charset 'utf-8';
+
+@color-red: #e54245;
+
+.page {
+  padding: 20px;
+  padding-bottom: 40px;
+}
+
+.title {
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  .text {
+    width: 100%;
+  }
+
+  .btn{
+    flex-shrink: 0;
+    font-size: 16px;
+    color: #333;
+    border-radius: 6px;
+    background-color: #eee;
+    padding: 4px 8px;
+  }
+}
+
+.ticket-list {
+  display: block;
+  margin-bottom: 40px;
+
+  .item {
+    box-sizing: border-box;
+    margin: 0 auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    margin-bottom: 20px;
+    width: calc(100% - 40px);
+    display: flex;
+    border: 1px solid #eee;
+    background-color: #f9f9fa;
+    align-items: center;
+    justify-content: space-between;
+
+    .amount {
+      width: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      flex-shrink: 0;
+      text {
+        font-size: 14px;
+        color: #888;
+        font-weight: normal;
+      }
+      .l1 {
+        color: @color-red;
+        font-weight: bold;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 6px;
+      }
+      .l2 {
+        width: 100%;
+        font-size: 12px;
+        color: #999;
+        text-align: center;
+      }
+    }
+
+    .shop{
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-left: 5px;
+      text-align: center;
+      margin-right: 5px;
+
+      .t{
+        width: 100%;
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 8px;
+      }
+
+      .date{
+        width: 100%;
+        font-size: 8px;
+        color: #999;
+      }
+    }
+
+    .button{
+      flex-shrink: 0;
+      .btn{
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        border-radius: 4px;
+        padding: 5px 8px 6px;
+        font-size: 14px;
+
+        &.disabled{
+          color:#999;
+        }
+      }
+    }
+  }
+}

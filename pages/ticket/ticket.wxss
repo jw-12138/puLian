@@ -1,0 +1,97 @@
+@charset 'utf-8';
+.page {
+  padding: 20px;
+  padding-bottom: 40px;
+}
+.title {
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+}
+.title .text {
+  width: 100%;
+}
+.title .btn {
+  flex-shrink: 0;
+  font-size: 16px;
+  color: #333;
+  border-radius: 6px;
+  background-color: #eee;
+  padding: 4px 8px;
+}
+.ticket-list {
+  display: block;
+  margin-bottom: 40px;
+}
+.ticket-list .item {
+  box-sizing: border-box;
+  margin: 0 auto;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  margin-bottom: 20px;
+  width: calc(100% - 40px);
+  display: flex;
+  border: 1px solid #eee;
+  background-color: #f9f9fa;
+  align-items: center;
+  justify-content: space-between;
+}
+.ticket-list .item .amount {
+  width: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+}
+.ticket-list .item .amount text {
+  font-size: 14px;
+  color: #888;
+  font-weight: normal;
+}
+.ticket-list .item .amount .l1 {
+  color: #e54245;
+  font-weight: bold;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 6px;
+}
+.ticket-list .item .amount .l2 {
+  width: 100%;
+  font-size: 12px;
+  color: #999;
+  text-align: center;
+}
+.ticket-list .item .shop {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-left: 5px;
+  text-align: center;
+  margin-right: 5px;
+}
+.ticket-list .item .shop .t {
+  width: 100%;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+.ticket-list .item .shop .date {
+  width: 100%;
+  font-size: 8px;
+  color: #999;
+}
+.ticket-list .item .button {
+  flex-shrink: 0;
+}
+.ticket-list .item .button .btn {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  padding: 5px 8px 6px;
+  font-size: 14px;
+}
+.ticket-list .item .button .btn.disabled {
+  color: #999;
+}
+/*# sourceMappingURL=ticket.wxss.map */

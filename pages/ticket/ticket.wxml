@@ -1,0 +1,80 @@
+<view class="page">
+  <view class="title">
+    <view class="text">可用优惠券（{{useableTickets}}）张</view>
+    <view class="btn" bind:tap="goToPage">
+      <image class="iconfont" src="/assets/img/map.svg" />
+      地图
+    </view>
+  </view>
+</view>
+<view class="ticket-list">
+  <view class="item" wx:for="{{tickets}}" wx:if="{{!item.used && !item.expired}}" wx:key="index">
+    <view class="amount">
+      <view class="l1">
+        {{item.amount}}
+        <text>元</text>
+      </view>
+      <view class="l2">{{item.claim}}</view>
+    </view>
+    <div class="shop">
+      <div class="t">{{item.shopName}}</div>
+      <div class="date">{{item.availableAt[0]}} - {{item.availableAt[1]}}</div>
+    </div>
+    <div class="button">
+      <div class="btn" style="background-color: #e1645a; color: #fff" size="mini" data-id="{{item.id}}" bind:tap="showQRcode">
+        立即使用
+      </div>
+    </div>
+  </view>
+</view>
+<view class="page">
+  <view class="title">
+    <view class="text">已核销的优惠券（{{usedTicket}}）张</view>
+  </view>
+</view>
+<view class="ticket-list">
+  <view class="item" wx:for="{{tickets}}" wx:if="{{item.used}}" wx:key="index">
+    <view class="amount">
+      <view class="l1">
+        {{item.amount}}
+        <text>元</text>
+      </view>
+      <view class="l2">{{item.claim}}</view>
+    </view>
+    <div class="shop">
+      <div class="t">{{item.shopName}}</div>
+      <div class="date">{{item.availableAt[0]}} - {{item.availableAt[1]}}</div>
+    </div>
+    <div class="button">
+      <div class="btn disabled">
+        已核销
+      </div>
+    </div>
+  </view>
+</view>
+<view class="page">
+  <view class="title">
+    <view class="text">已过期的优惠券（{{expiredTickets}}）张</view>
+  </view>
+</view>
+
+<view class="ticket-list">
+  <view class="item" wx:for="{{tickets}}" wx:if="{{item.expired}}" wx:key="index">
+    <view class="amount">
+      <view class="l1">
+        {{item.amount}}
+        <text>元</text>
+      </view>
+      <view class="l2">{{item.claim}}</view>
+    </view>
+    <div class="shop">
+      <div class="t">{{item.shopName}}</div>
+      <div class="date">{{item.availableAt[0]}} - {{item.availableAt[1]}}</div>
+    </div>
+    <div class="button">
+      <div class="btn disabled">
+        已过期
+      </div>
+    </div>
+  </view>
+</view>

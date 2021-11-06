@@ -1,13 +1,21 @@
 {
-  "pages":[
+  "pages": [
+    "pages/map/map",
     "pages/redpack/redpack",
-    "pages/index/index"
+    "pages/index/index",
+    "pages/ticket/ticket",
+    "pages/code/code"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle": "black"
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "位置信息将用于提升用户在小程序中的体验"
+    }
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"

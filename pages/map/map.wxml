@@ -1,0 +1,9 @@
+<map latitude="{{latitude}}" longitude="{{longitude}}" scale="{{scale}}" id="map">
+
+</map>
+
+<view class="component">
+  <view class="search">
+
+  </view>
+</view>

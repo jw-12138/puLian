@@ -1,1 +1,16 @@
-redpack
+<view class="page {{loaded ? 'on' : ''}}" style="background: url(\"/assets/img/redpack-bg.jpg\"); background-size: cover;background-position: center;">
+  <view class="redpack-wrap {{redpackWrapExpand ? 'on' : ''}}" style="height: {{height}}">
+    <view class="text">
+      恭喜您获得了一个红包!
+    </view>
+    <view class="top-half" style="background-color: #e1645a">
+    
+    </view>
+    <view class="button {{buttonSpin ? 'on' : ''}} {{buttonShow ? '' : 'off'}}" bind:tap="runAnimation">
+      開
+    </view>
+    <view class="bottom-half" style="background-color: #e45f4e">
+    
+    </view>
+  </view>
+</view>
